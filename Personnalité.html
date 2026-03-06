@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lucie Musschoot</title>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="https://use.typekit.net/ggu5kzv.css">
+        <link rel="stylesheet" href="Portfolio.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html"> 
+                <img src="Logo blanc.png" class="logo" alt="Logo Lucie Musschoot" width=90%/>
+            </a>
+            <nav class="navigateur">
+                <a href="Expérience.html" class="navigation">Expérience</a>
+                <a href="Personnalité.html" class="navigation active">Personnalité</a>
+                <a href="Projets.html" class="navigation">Projets</a>
+                <a href="Contact.html" class="navigation">Contact</a>
+            </nav>
+        </header>
+        <main>
+        <div class="passions">
+            <div>
+                <img src="Bocal-Musique.png" class="bocal-musique">
+            </div>
+            <div>
+                <img src="Bocal-Hand.png" class="bocal-hand">
+            </div>
+            <div>
+                <img src="Bocal-Ski.png" class="bocal-ski">
+            </div>
+            <div>
+                <img src="Bocal-Voyages.png" class="bocal-voyages">
+            </div>
+            <div>
+                <img src="Bocal-Judo.png" class="bocal-judo">
+            </div>
+        </div>
+        <img src="Étagère3.png" class="étagère1">
+            <div style="height: 120vh;"></div>
+            <section class="scroll-zone">
+            <div class="horizontal">
+                <div class="bloc">
+                <img src="Bocal-Musique.png">
+                <div>
+                    <h3>Musique</h3>
+                    <p>14 ans de pratique</p>
+                    <p>Concerts, Percussions & Piano</p>
+                </div>
+                </div>
+                <div class="bloc2">
+                <img src="Bocal-Hand.png">
+                <div>
+                    <h3>Handball</h3>
+                    <p>8 ans en compétition</p>
+                    <p>Capitaine & Gardienne</p>
+                </div>
+                </div>
+                <div class="bloc">
+                <img src="Bocal-Ski.png">
+                <div>
+                    <h3>Ski</h3>
+                    <p>14 ans en compétition</p>
+                    <p>Flèche d'argent & Skicross vermeil</p>
+                </div>
+                </div>
+                <div class="bloc2">
+                <img src="Bocal-Voyages.png">
+                <div>
+                    <h3>Voyages</h3>
+                    <p>À l'international</p>
+                    <p>Portugal, Japon, Dubaï, États-Unis, ...</p>
+                </div>
+                </div>
+                <div class="bloc">
+                <img src="Bocal-Judo.png">
+                <div>
+                    <h3>Judo</h3>
+                    <p>7 ans en compétition</p>
+                    <p>Ceinture verte</p>
+                </div>
+                </div>
+            <img src="Étagère.png" class="etagere">
+            </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="contactfooter">
+                    <p>lucie.musschoot@iscom.org</p>
+                    <p>07 68 83 33 17</p>
+                    <a href="https://www.linkedin.com/in/lucie-musschoot-8201a9291">
+                        <img src="LinkedIn.png" class="linkedin" alt="LinkedIn Lucie Musschoot">
+                    </a>
+                </div>
+                <div class="navigateurfooter">
+                    <a href="Expérience.html" class="navigationfooter">Expérience</a>
+                    <br><br>
+                    <a href="Personnalité.html" class="navigationfooter">Personnalité</a>
+                    <br><br>
+                    <a href="Projets.html" class="navigationfooter">Projets</a>
+                    <br><br>
+                    <a href="Contact.html" class="navigationfooter">Contact</a>
+                </div>
+            </div>
+            <p class="signature">Concocté avec le plus grand soin par Lucie Musschoot.</p>
+        </footer>
+<script>
+const section = document.querySelector('.scroll-zone');
+const horizontal = document.querySelector('.horizontal');
+
+let currentX = 0;
+let trapping = false;
+let sectionTop = 0;
+
+const triggerOffset = 200; // Ajuste cette valeur pour bloquer plus tôt ou plus tard
+
+function updateSectionTop() {
+    sectionTop = section.offsetTop;
+}
+
+updateSectionTop();
+window.addEventListener('resize', updateSectionTop);
+
+window.addEventListener(
+    'wheel',
+    (e) => {
+        const scrollY = window.scrollY;
+        const maxX = horizontal.scrollWidth - window.innerWidth;
+
+        // Vérifie si on est DANS la zone de scroll horizontal
+        if (scrollY >= sectionTop - triggerOffset && scrollY <= sectionTop + section.offsetHeight && maxX > 0) {
+            trapping = true;
+        } else {
+            trapping = false;
+            return; // pas dans la section, scroll normal
+        }
+
+        // Si on est au début et qu'on scroll vers le haut → laisse remonter la page
+        if (currentX <= 0 && e.deltaY < 0) {
+            trapping = false;
+            return; 
+        }
+
+        // Si on est à la fin et qu'on scroll vers le bas → laisse descendre la page
+        if (currentX >= maxX && e.deltaY > 0) {
+            trapping = false;
+            return; 
+        }
+
+        e.preventDefault(); // bloque le scroll vertical normal
+
+        // Transforme le scroll vertical en horizontal
+        currentX += e.deltaY;
+        currentX = Math.max(0, Math.min(currentX, maxX));
+
+        horizontal.style.transform = `translateX(-${currentX}px)`;
+    },
+    { passive: false }
+);
+</script>
+    </body>
+</html>
