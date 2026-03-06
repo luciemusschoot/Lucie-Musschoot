@@ -1,12 +1,12 @@
 const container = document.getElementById("trail-container");
 
 const images = [
-    "Fleurs/Fleur-6.png",
-    "Fleurs/Fleur-19.png",
-    "Fleurs/Fleur-38.png",
-    "Fleurs/Fleur-44.png",
-    "Fleurs/Fleur-51.png",
-    "Fleurs/Fleur-53.png",
+    "Fleur-6.png",
+    "Fleur-19.png",
+    "Fleur-38.png",
+    "Fleur-44.png",
+    "Fleur-51.png",
+    "Fleur-53.png",
 ];
 
 let lastX = 0;
