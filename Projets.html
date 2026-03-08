@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lucie Musschoot</title>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="https://use.typekit.net/ggu5kzv.css">
+        <link rel="stylesheet" href="Portfolio.css">
+    </head>
+    <body class="arrosoir">
+        <header>
+            <a href="index.html"> 
+                <img src="Logo blanc.png" class="logo" alt="Logo Lucie Musschoot" width=90%/>
+            </a>
+            <nav class="navigateur">
+                <a href="Experience.html" class="navigation">Expérience</a>
+                <a href="Personnalite.html" class="navigation">Personnalité</a>
+                <a href="Projets.html" class="navigation active">Projets</a>
+                <a href="Contact.html" class="navigation">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <div id="portfolio" class="portfolio">
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('cyberpunk')">
+                        <div class="image-wrapper">
+                            <img src="Cyberpunk - Lucie Musschoot.jpg" class="image" id="cyberpunkR"/>
+                        </div>
+                    <p class="légende">Cyberpunk</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('colors')">
+                    <div class="image-wrapper">
+                        <img src="Colors - Lucie Musschoot.png" class="image" id="colorsR"/>
+                    </div>
+                    <p class="légende">Colors</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('followthesound')">
+                    <div class="image-wrapper">
+                        <img src="Follow The Sound - Lucie Musschoot.png" class="image" id="followthesoundR"/>
+                    </div>
+                    <p class="légende">Follow The Sound</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('unsilencevautmillemots')">
+                    <div class="image-wrapper">
+                        <img src="Un Silence Vaut Mille Mots - Lucie Musschoot.png" class="image" id="unsilencevautmillemotsR"/>
+                    </div>
+                    <p class="légende">Un Silence Vaut Mille Mots</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('lespetitsmouchoirs')">
+                    <div class="image-wrapper">
+                        <img src="Les Petits Mouchoirs - Lucie Musschoot.png" class="image" id="lespetitsmouchoirsR"/>
+                    </div>
+                    <p class="légende">Les Petits Mouchoirs</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('vertige')">
+                    <div class="image-wrapper">
+                        <img src="Vertige - Lucie Musschoot.png" class="image" id="vertigeR"/>
+                    </div>
+                    <p class="légende">Vertige</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('lecemdepiano')">
+                    <div class="image-wrapper">
+                        <img src="Affiche Piano - Lucie Musschoot.png" class="image" id="lecemdepianoR"/>
+                    </div>
+                    <p class="légende">Le CEM de piano</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('kyoto')">
+                    <div class="image-wrapper">
+                        <img src="Kyoto - Lucie Musschoot.png" class="image" id="kyotoR"/>
+                    </div>
+                    <p class="légende">Kyoto</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('luciemusschoot')">
+                    <div class="image-wrapper">
+                        <img src="Lucie Musschoot - Lucie Musschoot.png" class="image" id="luciemusschootR"/>
+                    </div>
+                    <p class="légende">Lucie Musschoot</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('lesétiquettes')">
+                    <div class="image-wrapper">
+                        <img src="Les Étiquettes - Lucie Musschoot.png" class="image" id="lesétiquettesR"/>
+                    </div>
+                    <p class="légende">Les Étiquettes</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('thefloralfeed')">
+                    <div class="image-wrapper">
+                        <img src="The Floral Feed - Lucie Musschoot.png" class="image" id="thefloralfeedR"/>
+                    </div>
+                    <p class="légende">The Floral Feed</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('les5ansdetabbygris')">
+                    <div class="image-wrapper">
+                        <img src="Les 5 ans de Tabby Gris - Lucie Musschoot.png" class="image" id="les5ansdetabbygrisR"/>
+                    </div>
+                    <p class="légende">Les 5 ans de Tabby Gris</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('lesinspirations')">
+                    <div class="image-wrapper">
+                        <img src="Les Inspirations - Lucie Musschoot.png" class="image" id="lesinspirationsR"/>
+                    </div>
+                    <p class="légende">Les Inspirations</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('ocean');saveScroll()">
+                    <div class="image-wrapper">
+                        <img src="Ocean - Lucie Musschoot.png" class="image" id="oceanR"/>
+                    </div>
+                    <p class="légende">Ocean</p>
+                </a>
+                <a href="#" class="cellule" onclick="saveScroll();ouvrirProjet('salomon')">
+                    <div class="image-wrapper">
+                        <img src="Salomon - Lucie Musschoot.png" class="image" id="salomonR"/>
+                    </div>
+                    <p class="légende">Salomon</p>
+                </a>
+            </div>
+            <div class="overlay-projet" id="cyberpunk">
+                <span class="fermer" onclick="fermerProjet('cyberpunk'); restoreScroll()">×</span>
+                <a class="suivant" onclick="ouvrirProjet('colors'); fermerProjet('cyberpunk')">→</a>
+                <div class="projet-contenu">
+                    <img src="Cyberpunk - Lucie Musschoot.jpg" class="image2">
+                    <div class="description">
+                        <h4>Cyberpunk</h4>
+                        <p class="logiciels2">Logiciels utilisés : Photoshop, Copilot</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Composer une affiche de l'adaptation cinématographique (fictive) du jeu vidéo Cyberpunk 2077</li>
+                                <li>S'approprier diverses techniques de Photoshop</li>
+                                <li>Lier technique et esthétisme</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="colors">
+                <span class="fermer" onclick="fermerProjet('colors'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('cyberpunk'); fermerProjet('colors')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('followthesound'); fermerProjet('colors')">→</a>
+                <div class="projet-contenu">
+                    <img src="Colors - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Colors</h4>
+                        <p class="logiciels2">Logiciel utilisé : Illustrator</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Créer une affiche pour l'Exposition "Colors" de Lille 3000</li>
+                                <li>S'approprier diverses techniques d'Illustrator</li>
+                                <li>Lier technique et esthétisme</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="followthesound">
+                <span class="fermer" onclick="fermerProjet('followthesound'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('colors'); fermerProjet('followthesound')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('unsilencevautmillemots'); fermerProjet('followthesound')">→</a>
+                <div class="projet-contenu">
+                    <img src="Follow The Sound - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Follow The Sound</h4>
+                        <p class="logiciels2">Logiciel utilisé : Illustrator</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Imaginer un concept de festival, aujourd'hui inexistant</li>
+                                <li>Trouver un nom à cet événement</li>
+                                <li>Réaliser une affiche afin de le promouvoir</li>
+                                <li>Pas de photos, que des illustrations</li>
+                                <li>Créer une interaction entre la typographie et le visuel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="unsilencevautmillemots">
+                <span class="fermer" onclick="fermerProjet('unsilencevautmillemots'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('followthesound'); fermerProjet('unsilencevautmillemots')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('lespetitsmouchoirs'); fermerProjet('unsilencevautmillemots')">→</a>
+                <div class="projet-contenu">
+                    <img src="Un Silence Vaut Mille Mots - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Un Silence Vaut Mille Mots</h4>
+                        <p class="logiciels2">Logiciel utilisé : Illustrator</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Typographier une expression française</li>
+                                <li>Composer uniquement avec des lettres, ponctuations, chiffres ou symboles</li>
+                                <li>Mise en page créative, graphique et expressive</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="lespetitsmouchoirs">
+                <span class="fermer" onclick="fermerProjet('lespetitsmouchoirs'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('unsilencevautmillemots'); fermerProjet('lespetitsmouchoirs')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('vertige'); fermerProjet('lespetitsmouchoirs')">→</a>
+                <div class="projet-contenu">
+                    <img src="Les Petits Mouchoirs - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Les Petits Mouchoirs</h4>
+                        <p class="logiciels2">Logiciel utilisé : Photoshop</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Choisir un film qui me tient à coeur</li>
+                                <li>Réaliser une série de 6 affiches de ce film</li>
+                                <li>Un fil rouge graphique doit être présent entre les affiches</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="vertige">
+                <span class="fermer" onclick="fermerProjet('vertige'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('lespetitsmouchoirs'); fermerProjet('vertige')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('lecemdepiano'); fermerProjet('vertige')">→</a>
+                <div class="projet-contenu">
+                    <img src="Vertige - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Vertige</h4>
+                        <p class="logiciels2">Logiciel utilisé : Illustrator</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Réaliser une couverture de magazine</li>
+                                <li>Choisir une photographie forte, qui nous est propre</li>
+                                <li>Donner un titre au magazine, intimement lié à l'image</li>
+                                <li>Mise en page créative et graphique du mot et de l'image</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="lecemdepiano">
+                <span class="fermer" onclick="fermerProjet('lecemdepiano'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('vertige'); fermerProjet('lecemdepiano')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('kyoto'); fermerProjet('lecemdepiano')">→</a>
+                <div class="projet-contenu">
+                    <img src="Affiche Piano - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Le CEM de piano</h4>
+                        <p class="logiciels2">Logiciel utilisé : Illustrator</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Réaliser une affiche pour une audition de piano</li>
+                                <li>Y inscrire le programme détaillé, le lieu, la date et les participants</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="kyoto">
+                <span class="fermer" onclick="fermerProjet('kyoto'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('lecemdepiano'); fermerProjet('kyoto')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('luciemusschoot'); fermerProjet('kyoto')">→</a>
+                <div class="projet-contenu">
+                    <img src="Kyoto - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Kyoto</h4>
+                        <p class="logiciels2">Logiciel utilisé : Photoshop, Illustrator, InDesign</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Sur Photoshop, créer une première de couverture pour un magazine touristique (ville au choix)</li>
+                                <li>Créer deux logos pour cette ville, à l'aide d'Illustrator</li>
+                                <li>Réaliser un magazine final de quatre pages, avec ces éléments comme base, sur InDesign</li>
+                                <li>Choisir parmi les deux logos celui qui correspond le mieux à la production finale</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="luciemusschoot">
+                <span class="fermer" onclick="fermerProjet('luciemusschoot'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('kyoto'); fermerProjet('luciemusschoot')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('lesétiquettes'); fermerProjet('luciemusschoot')">→</a>
+                <div class="projet-contenu">
+                    <img src="Lucie Musschoot - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Lucie Musschoot</h4>
+                        <p class="logiciels2">Logiciel utilisé : Illustrator</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Réaliser un logo qui me représente et me caractérise</li>
+                                <li>Utiliser des codes modernes, en corrélation avec l'univers d'un portfolio digital</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="lesétiquettes">
+                <span class="fermer" onclick="fermerProjet('lesétiquettes'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('luciemusschoot'); fermerProjet('lesétiquettes')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('thefloralfeed'); fermerProjet('lesétiquettes')">→</a>
+                <div class="projet-contenu">
+                    <img src="Les Étiquettes - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Les Étiquettes</h4>
+                        <p class="logiciels2">Logiciel utilisé : Canva</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Créer des étiquettes à insérer à l'intérieur des colis produits afin d'humaniser les transactions</li>
+                                <li>Rappeler les conseils d'entretien des produits vendus</li>
+                                <li>Montrer certaines des mises en place RSE de l'entreprise de façon originale et créative</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="thefloralfeed">
+                <span class="fermer" onclick="fermerProjet('thefloralfeed'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('lesétiquettes'); fermerProjet('thefloralfeed')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('les5ansdetabbygris'); fermerProjet('thefloralfeed')">→</a>
+                <div class="projet-contenu">
+                    <img src="The Floral Feed - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>The Floral Feed</h4>
+                        <p class="logiciels2">Logiciel utilisé : Canva</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Améliorer le Feed Instagram de l'entreprise</li>
+                                <li>Un fil rouge graphique doit être présent (mêmes couleurs, mêmes typographies, ...)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="les5ansdetabbygris">
+                <span class="fermer" onclick="fermerProjet('les5ansdetabbygris'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('thefloralfeed'); fermerProjet('les5ansdetabbygris')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('lesinspirations'); fermerProjet('les5ansdetabbygris')">→</a>
+                <div class="projet-contenu">
+                    <img src="Les 5 ans de Tabby Gris - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Les 5 ans de Tabby Gris</h4>
+                        <p class="logiciels2">Logiciel utilisé : Canva</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Imaginer et créer un livret pour inciter les clients à se rendre à l'événement anniversaire de l'entreprise</li>
+                                <li>Valoriser la ville d’accueil afin d’encourager le déplacement, en particulier pour les clients éloignés</li>
+                                <li>Y intégrer un édito, une carte Google My Maps et des solutions de parking</li>
+                                <li>Humaniser le livret en indiquant les lieux coups de coeur des employés</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="lesinspirations">
+                <span class="fermer" onclick="fermerProjet('lesinspirations'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('les5ansdetabbygris'); fermerProjet('lesinspirations')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('ocean'); fermerProjet('lesinspirations')">→</a>
+                <div class="projet-contenu">
+                    <img src="Les Inspirations - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Les Inspirations</h4>
+                        <p class="logiciels2">Logiciel utilisé : WordPress</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Poursuivre et finaliser la création de pages inspirations produits sur WordPress</li>
+                                <li>Sélectionner des produits en corrélation avec les inspirations créées (Mariage, Gentlemen, Paddock Paradise, ...)</li>
+                                <li>Créer un carrousel WordPress avec ces produits</li>
+                                <li>Rédiger un wording pertinent et impactant pour chaque produit</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="ocean">
+                <span class="fermer" onclick="fermerProjet('ocean'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('lesinspirations'); fermerProjet('ocean')">←</a>
+                <a class="suivant" onclick="ouvrirProjet('salomon'); fermerProjet('ocean')">→</a>
+                <div class="projet-contenu">
+                    <img src="Ocean - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Ocean</h4>
+                        <p class="logiciels2">Logiciel utilisé : Photoshop, Illustrator</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Temps imparti d'1h30 et banque d'images ultra-restreinte</li>
+                                <li>S'approprier diverses techniques de Photoshop et d'Illustrator</li>
+                                <li>Créer un visuel harmonieux et créatif</li>
+                                <li>Inclure un titre déformé, en corrélation avec la production globale</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-projet" id="salomon">
+                <span class="fermer" onclick="fermerProjet('salomon'); restoreScroll()">×</span>
+                <a class="précédent" onclick="ouvrirProjet('ocean'); fermerProjet('salomon')">←</a>
+                <div class="projet-contenu">
+                    <img src="Salomon - Lucie Musschoot.png" class="image2">
+                    <div class="description">
+                        <h4>Salomon</h4>
+                        <p class="logiciels2">Logiciel utilisé : Illustrator</p>
+                        <div class="brief">
+                            <p>Le brief</p>
+                            <ul>
+                                <li>Créer une affiche promotionnelle pour une marque de notre choix</li>
+                                <li>S'approprier diverses techniques d'Illustrator</li>
+                                <li>S'inspirer plus ou moins du Doodle Art</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="contactfooter">
+                    <p>lucie.musschoot@iscom.org</p>
+                    <p>07 68 83 33 17</p>
+                    <a href="https://www.linkedin.com/in/lucie-musschoot-8201a9291">
+                        <img src="LinkedIn.png" class="linkedin" alt="LinkedIn Lucie Musschoot">
+                    </a>
+                </div>
+                <div class="navigateurfooter">
+                    <a href="Experience.html" class="navigationfooter">Expérience</a>
+                    <br><br>
+                    <a href="Personnalite.html" class="navigationfooter">Personnalité</a>
+                    <br><br>
+                    <a href="Projets.html" class="navigationfooter">Projets</a>
+                    <br><br>
+                    <a href="Contact.html" class="navigationfooter">Contact</a>
+                </div>
+            </div>
+            <p class="signature">Concocté avec le plus grand soin par Lucie Musschoot.</p>
+        </footer>
+        <script>
+        function ouvrirProjet(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+        function fermerProjet(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+        </script>
+        <script>
+        function saveScroll() {
+            sessionStorage.setItem('scrollY', window.scrollY);
+        }
+
+        function restoreScroll() {
+            const y = sessionStorage.getItem('scrollY');
+            if (y !== null) {
+                setTimeout(() => {
+                    window.scrollTo(0, y);
+                }, 50);
+            }
+        }
+        </script>
+        <script>
+        document.querySelectorAll('.cellule').forEach(cellule => {
+            cellule.addEventListener('mouseenter', () => {
+                cellule.classList.add('seen');
+            });
+        });
+        </script>
+    </body>
+</html>
